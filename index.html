@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata&family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/2574737594.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Login/Signup</title>
+  
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1 id="title">Sign up</h1>
+        <form>
+          <div class="input-group">
+            <div class="input-field" id="nameField">
+              <i class="fa-solid fa-user-tie"></i>
+              <input type="text" placeholder="nickName" />
+            </div>
+            <div class="input-field">
+              <i class="fa-sharp fa-solid fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fa-sharp fa-solid fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <div class="input-field" id="confirmField">
+                <i class="fa-sharp fa-solid fa-lock"></i>
+                <input type="password" placeholder="Confirm password" />
+              </div>
+            <p>Forgot password?  <a href="#"><span class="txt">Click here!</span></a></p>
+          </div>
+          <div class="btn-field">
+            <button type="button" id="signUpBtn">Sign up</button>
+            <button type="button" id="logInBtn" class="disable">Log in</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  <!-- ----------------actions on click---------- -->
+  <script>
+    let signUpBtn = document.getElementById("signUpBtn");
+    let logInBtn = document.getElementById("logInBtn");
+    let nameField = document.getElementById("nameField");
+    let confirmField = document.getElementById("confirmField");
+    let title = document.getElementById("title");
+
+    logInBtn.onclick = function(){
+        confirmField.style.maxHeight="0"
+        nameField.style.maxHeight = "0";
+        title.innerHTML = "Log in";
+        signUpBtn.classList.add("disable");
+        logInBtn.classList.remove("disable");
+
+    }
+    signUpBtn.onclick = function(){
+        confirmField.style.maxHeight = "45px";
+        nameField.style.maxHeight = "45px";
+        title.innerHTML = "Sign up";
+        signUpBtn.classList.remove("disable");
+        logInBtn.classList.add("disable");
+
+    }
+
+  </script>
+  </body>
+</html>

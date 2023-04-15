@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  font-family: "Bebas Neue", cursive;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/backgr.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.form-box {
+  width: 90%;
+  max-width: 400px;
+  position: absolute;
+
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: #f2efe8;
+
+  padding: 50px 60px 70px;
+  text-align: center;
+  border-radius: 10px;
+}
+.form-box h1 {
+  font-size: 40px;
+  margin-bottom: 60px;
+  color: #005c7d;
+  position: relative;
+  font-weight: 3000;
+}
+.form-box h1::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #005c7d;
+  bottom: -10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.input-field {
+  background: #eaeaea;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  max-height: 45px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+}
+.input-field i {
+  margin-left: 15px;
+  color: #999;
+}
+
+form p {
+  text-align: left;
+  font-size: 14px;
+}
+form p a {
+  text-decoration: none;
+  color: #005c7d;
+}
+.txt:hover {
+  text-decoration: underline;
+}
+.btn-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.btn-field button {
+  flex-basis: 48%;
+  background: #005c7d;
+  color: #fff;
+  height: 35px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 1s;
+}
+
+.input-group {
+  height: 290px;
+}
+.btn-field button.disable {
+  background: #eaeaea;
+  color: #005c7d;
+}
